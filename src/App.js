@@ -11,6 +11,10 @@ function App() {
     .then(changeAccount)
 
     window.ethereum.on("accountsChanged", changeAccount)
+
+    return () => {
+      window.ethereum.removeListener("accountsChanged", changeAccount)
+    }
   }, [])
 
   return (
