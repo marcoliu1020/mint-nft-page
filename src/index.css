@@ -1,0 +1,28 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+:root {
+    --primary: #1aac83;
+    --error: #e7195a;
+}
+
+.App {
+    min-height: 100vh;
+    background-color: #f1f1f1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mint-button {
+    background: var(--primary);
+    border: 0;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Poppings';
+    border-radius: 4px;
+    cursor: pointer;
+}
