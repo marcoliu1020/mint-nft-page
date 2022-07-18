@@ -1,7 +1,12 @@
 import React from "react";
+// import { ethers } from "ethers";
 
 function App() {
   const [currentAccount, setCurrentAccount] = React.useState(null)
+
+  /**
+   * account
+   */
   React.useEffect(() => {
     const changeAccount = (accounts) => {
       setCurrentAccount(accounts[0])
@@ -16,6 +21,26 @@ function App() {
       window.ethereum.removeListener("accountsChanged", changeAccount)
     }
   }, [])
+
+  /**
+   * provider & signer
+   */
+  // const [provider, setProvider] = React.useState(null)
+  // const [signer, setSigner] = React.useState(null)
+  // React.useEffect(() => {
+  // if (currentAccount) {
+  //   const _provider = new ethers.providers.Web3Provider(window.ethereum)
+  //   setProvider(_provider)
+  //   setSigner(_provider.getSigner())
+  // }
+  // }, [currentAccount])
+
+  
+
+  
+
+
+
 
   return (
     <div className="App">
