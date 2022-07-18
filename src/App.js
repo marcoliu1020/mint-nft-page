@@ -3,8 +3,14 @@ import React from "react";
 function App() {
   const [currentAccount, setCurrentAccount] = React.useState(null)
   React.useEffect(() => {
+    const changeAccount = (accounts) => {
+      setCurrentAccount(accounts[0])
+    }
+
     window.ethereum.request({ method: 'eth_requestAccounts' })
-    .then(accounts => setCurrentAccount(accounts[0]))
+    .then(changeAccount)
+
+    window.ethereum.on("accountsChanged", changeAccount)
   }, [])
 
   return (
