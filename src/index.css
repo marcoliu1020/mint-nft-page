@@ -16,6 +16,11 @@
     align-items: center;
 }
 
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
 .mint-button {
     background: var(--primary);
     border: 0;
@@ -25,4 +30,23 @@
     font-family: 'Poppings';
     border-radius: 4px;
     cursor: pointer;
+}
+.mint-button:hover {
+    background: var(--primary);
+    opacity: 0.9;
+}
+
+.cancel-button {
+    background: var(--error);
+    border: 0;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Poppings';
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cancel-button:hover {
+    background: var(--error);
+    opacity: 0.9;
 }
